@@ -1,0 +1,15 @@
+name: push to aws lambda function
+
+on:
+  push:
+    branches:
+      - main
+    
+jobs:
+  lambdaDeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: list files in the directory
+        run: ls -la
+  

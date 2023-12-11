@@ -12,4 +12,10 @@ jobs:
       - uses: actions/checkout@main
       - name: list files in the directory
         run: ls -la
+      - name: zip the package
+        run: zip -r python.zip helloworld.py
+      - name: list files in the directory
+        run: ls -la
+      - name: aws cli check
+        run: aws --version      
   

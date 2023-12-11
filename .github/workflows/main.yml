@@ -17,5 +17,11 @@ jobs:
       - name: list files in the directory
         run: ls -la
       - name: aws cli check
-        run: aws --version      
+        run: aws --version
+      - name: deploy to lambda using cli
+        run: aws lambda update-function-code --function-name  GithubWebhookFunction --zip-file fileb://python.zip
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: "ap-south-1"
   

@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('aaa') {
       steps {
-        sh 'fdsfsdf'
+        sh 'fdsfsdfaa'
       }
     }
 
